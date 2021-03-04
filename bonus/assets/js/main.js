@@ -1,11 +1,14 @@
-var cognomi = [ "Giammario", "Casubolo", "Aro", "Mastrobattista", "Franco", "Baro"];
-
+var cognomi = [ "Giammario", "Aron", "Mastrobattista", "Barone", "Lodigiani", ""];
+var myList = document.getElementById("List");
 var cognomiFirst= 0;
 var cognomiSecond= 0;
-
-
-
 var len = cognomi.length;
+var cognomeUtente =prompt("Inserisci il tuo cognome") ;
+var humanOrder;
+if(isNaN){
+    cognomi.push(cognomeUtente);
+    cognomi.sort();
+}
 
 for (var i = 0; i < len; i++) {
     for(var j = 0 ; j < len - 1 ; j++){
@@ -17,51 +20,14 @@ for (var i = 0; i < len; i++) {
             var temp = cognomi[j];
             cognomi[j] = cognomi[j +1];
             cognomi[j + 1]= temp;
-        } 
-        
-        
-    }
-    
-    
+        }   
+    }   
+}
+
+for (var i = 1; i < cognomi.length ; i++) {
+    humanOrder = cognomi.indexOf(cognomi[i]);
+    console.log(humanOrder + " " + cognomi[i]);
+    myList.innerHTML += "<li>"+ humanOrder + "  " + cognomi[i]+"</li>";
 }
 
 console.log(cognomi);
-
-
-
-
-
-
-
-// var cognomeUtente =prompt("Inserisci il tuo cognome") ;
-
-var myList = document.getElementById("List");
-
-// if(isNaN){
-//     cognomi.push(cognomeUtente);
-//     cognomi.sort();
-// }
-
-// var humanOrder;
-
-// for (var i = 1; i < cognomi.length ; i++) {
-//     humanOrder = cognomi.indexOf(cognomi[i]);
-//     console.log(humanOrder + " " + cognomi[i]);
-//     myList.innerHTML += "<li>"+ humanOrder + "  " + cognomi[i]+"</li>";
-// }
-
-
-// function bubble_Sort()
-
-// {
-    
-//     var n= cognomiFirst.length;
-//     do {
-//         for (let i = 0; i < n; i++) {
-            
-//             n--;
-//         }
-//     } while (sort);
-//     return cognomiFirst;
-// }
-// console.log(bubble_Sort());
